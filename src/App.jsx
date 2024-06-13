@@ -6,7 +6,7 @@ import Weather from "./component/Weather";
 function App() {
   const [data, setData] = useState({});
   const [location, setlocation] = useState("");
-  const [error, setError] = useState(""); // Add state for error message
+  const [error, setError] = useState("");
   const API_KEY = "440f129425ba215083ee9bc5a1255b72";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`;
 
@@ -18,7 +18,7 @@ function App() {
         .then((response) => {
           setData(response.data);
           setError("");
-          // console.log(response.data);
+          console.log(response.data);
         })
         .catch((error) => {
           setError("Location not found. Please try again.");
@@ -35,7 +35,7 @@ function App() {
           <input
             type="text"
             className="py-4 px-6 w-[700px] text-lg rounded-3xl border border-gray-200 text-gray-600 placeholder:text-gray-400 focus:outline-none bg-white-600/100 shadow-md"
-            placeholder="Enter your location"
+            placeholder="Enter your location and press Enter"
             value={location}
             onChange={(event) => setlocation(event.target.value)}
             onKeyDown={searchLocation}

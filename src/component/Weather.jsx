@@ -3,7 +3,7 @@ import React from "react";
 const Weather = ({ WeatherData }) => {
   return (
     <div>
-      {WeatherData.weather ? ( // Corrected to WeatherData.weather
+      {WeatherData.weather ? (
         <div className="w-[500px] h-[350px] bg-gray-300 shadow-lg rounded-xl m-auto relative px-6 top-[10%] flex flex-col justify-between">
           <div className="flex justify-between w-full">
             <div className="w-1/2 my-4 mx-auto flex flex-col items-start">
